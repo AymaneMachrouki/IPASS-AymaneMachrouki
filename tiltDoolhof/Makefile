@@ -10,13 +10,13 @@
 
 # source & header files in this project (main.cpp is automatically assumed)
 
-HEADERS := MPU6050.hpp
+HEADERS := MPU6050.hpp walls.hpp
 
-SOURCES := MPU6050.cpp
+SOURCES := MPU6050.cpp walls.cpp
 
 # other places to look for files for this project
 SEARCH  := 
-SERIAL_PORT := /dev/ttyACM1
+SERIAL_PORT := /dev/ttyACM0
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
 RELATIVE := $(RELATIVE)../

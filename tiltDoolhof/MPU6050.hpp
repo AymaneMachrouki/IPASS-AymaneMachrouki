@@ -76,19 +76,19 @@ public:
     /// \brief
     /// Returns the accelerometer's X value.
     /// \details
-    /// This function returns the accelerometer's X value in g.
+    /// This function returns the accelerometer's X value in g *10^3.
     int16_t getAccellerationX();
 
     /// \brief
     /// Returns the accelerometer's Y value.
     /// \details
-    /// This function returns the accelerometer's Y value in g.
+    /// This function returns the accelerometer's Y value in g *10^3.
     int16_t getAccellerationY();
 
     /// \brief
     /// Returns the accelerometer's Z value.
     /// \details
-    /// This function returns the accelerometer's Z value in g.
+    /// This function returns the accelerometer's Z value in g *10^3.
     int16_t getAccellerationZ();
 
     /// \brief

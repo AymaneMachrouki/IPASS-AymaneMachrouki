@@ -111,7 +111,7 @@ int16_t MPU6050::getAccellerationX(){
         readTransaction.read(data, 2);
     }
     accellerationX = (data[0] << 8) | data[1];
-    accellerationX = accellerationX / accelerometerSensitivity;
+    accellerationX = accellerationX / (accelerometerSensitivity / 1000);
     return accellerationX;
 }
 
@@ -127,13 +127,13 @@ int16_t MPU6050::getAccellerationY(){
         readTransaction.read(data, 2);
     }
     accellerationY = (data[0] << 8) | data[1];
-    accellerationY = accellerationY / accelerometerSensitivity;
+    accellerationY = accellerationY / (accelerometerSensitivity / 1000);
     return accellerationY;
 }
 
 int16_t MPU6050::getAccellerationZ(){
     int16_t accellerationZ;
-    uint8_t data [2];
+    uint8_t data[2];
     {
         auto writeTransaction = ((hwlib::i2c_bus*)(&bus))->write(address);
         writeTransaction.write(0x3F);
@@ -143,7 +143,7 @@ int16_t MPU6050::getAccellerationZ(){
         readTransaction.read(data, 2);
     }
     accellerationZ = (data[0] << 8) | data[1];
-    accellerationZ = accellerationZ / accelerometerSensitivity;
+    accellerationZ = accellerationZ / (accelerometerSensitivity / 1000);
     return accellerationZ;
 }
 
@@ -212,13 +212,11 @@ void MPU6050::resetGyroscope(){
 }
 
 void MPU6050::resetChip(){
-    hwlib::cout << "bruhhhh" << hwlib::endl;
     {
         auto writeTransaction = ((hwlib::i2c_bus*)(&bus))->write(address);
         writeTransaction.write(0x6B);
         writeTransaction.write(0x80);
     }
-    hwlib::cout << "bruh" << hwlib::endl;
     gyroscopeSensitivity = 131;
     accelerometerSensitivity = 16384;
 }
