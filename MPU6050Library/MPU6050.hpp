@@ -3,12 +3,10 @@
 #include "hwlib.hpp"
 
 /// @file
-
 /// \brief
 /// Library for the MPU6050
 /// \details
 /// This class provides a library containing multiple functions for the MPU3060.
-
 class MPU6050{
 private:
     uint8_t address;
@@ -32,7 +30,7 @@ public:
     /// \brief
     /// Wakes up the chip.
     /// \details
-    /// This function wakes up the chip by writing 0 to the SLEEP bit of the PWR_MGMT_1 register.
+    /// This function wakes up the chip so all other functions can be used.
     void wakeUp();
 
     /// \brief
@@ -44,7 +42,7 @@ public:
     /// \brief
     /// Reads a register.
     /// \details
-    /// This function will read and return the register that it is given.
+    /// This function will read the value of the register that it is given.
     uint8_t readRegister(uint8_t registerAdress);
 
     /// \brief
@@ -70,7 +68,7 @@ public:
     /// \brief
     /// Resets the temperature.
     /// \details
-    /// This function resests the temperature by writing a 1 to the TEMP_RESET bit of the SIGNAL_PATH_RESET register. 
+    /// This function resests the temperature sensor. 
     void resetTemperature();
 
     /// \brief
@@ -94,7 +92,7 @@ public:
     /// \brief
     /// Resets the accelerometer.
     /// \details
-    /// This function resests the accelerometer by writing a 1 to the ACCEL_RESET bit of the SIGNAL_PATH_RESET register. 
+    /// This function resests the accelerometer. 
     void resetAccelerometer();
 
     /// \brief
@@ -104,27 +102,27 @@ public:
     int16_t getGyroX();
 
     /// \brief
-    /// Returns the gyroscope's X value.
+    /// Returns the gyroscope's Y value.
     /// \details
     /// This function returns the gyroscope's Y value in °/s.
     int16_t getGyroY();
 
     /// \brief
-    /// Returns the gyroscope's X value.
+    /// Returns the gyroscope's Z value.
     /// \details
     /// This function returns the gyroscope's Z value in °/s.
     int16_t getGyroZ();
 
     /// \brief
-    /// Resets the temperature.
+    /// Resets the gyroscope.
     /// \details
-    /// This function resests the gyroscope by writing a 1 to the GYRO_RESET bit of the SIGNAL_PATH_RESET register. 
+    /// This function resests the gyroscope. 
     void resetGyroscope();
 
     /// \brief
     /// Resets chip.
     /// \details
-    /// This function will reset the chip by writing 1 to the DEVICE_RESET bit of the PWR_MGMT_1 register.
+    /// This function will reset the chip.
     void resetChip();
 };
 

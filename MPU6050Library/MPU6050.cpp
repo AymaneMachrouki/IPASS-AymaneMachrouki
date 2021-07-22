@@ -46,9 +46,7 @@ uint8_t MPU6050::readRegister(uint8_t registerAdress){
 }
 
 void MPU6050::setAccelerometerSensitivity(uint8_t fullScaleRange){
-    if(fullScaleRange > 3){
-        hwlib::cout << "This full scale range doesn't exist" << hwlib::endl;
-    }
+    if(fullScaleRange > 3) hwlib::cout << "This full scale range doesn't exist" << hwlib::endl;
     else{
         accelerometerSensitivity = accelerometerSensitivities[fullScaleRange];
         fullScaleRange = fullScaleRange << 3;
@@ -61,9 +59,7 @@ void MPU6050::setAccelerometerSensitivity(uint8_t fullScaleRange){
 }
 
 void MPU6050::setGyroscopeSensitivity(uint8_t fullScaleRange){
-    if(fullScaleRange > 3){
-        hwlib::cout << "This full scale range doesn't exist" << hwlib::endl;
-    }
+    if(fullScaleRange > 3) hwlib::cout << "This full scale range doesn't exist" << hwlib::endl;
     else{
         gyroscopeSensitivity = gyroscopeSensitivities[fullScaleRange];
         fullScaleRange = fullScaleRange << 3;
@@ -217,6 +213,7 @@ void MPU6050::resetChip(){
         writeTransaction.write(0x6B);
         writeTransaction.write(0x80);
     }
+	hwlib::wait_ms(100);
     gyroscopeSensitivity = 131;
     accelerometerSensitivity = 16384;
 }
