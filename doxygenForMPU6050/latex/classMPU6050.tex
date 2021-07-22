@@ -1,0 +1,227 @@
+\hypertarget{classMPU6050}{}\doxysection{M\+P\+U6050 Class Reference}
+\label{classMPU6050}\index{MPU6050@{MPU6050}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMPU6050_a669bc47c08b86906a7dda442af96f0d5}{M\+P\+U6050}} (uint8\+\_\+t address, hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&bus)
+\begin{DoxyCompactList}\small\item\em Initilizes values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a14d45cb8c0d8744bd280ca7d05e5d962}{wake\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Wakes up the chip. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMPU6050_a1b3f024861c18e17790ebb560d5bdd32}{who\+AmI}} ()
+\begin{DoxyCompactList}\small\item\em Returns the chip\textquotesingle{}s address. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classMPU6050_a51c82170d634348a8997720fcd2d581f}{read\+Register}} (uint8\+\_\+t register\+Adress)
+\begin{DoxyCompactList}\small\item\em Reads a register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a5869de617eaef8041bc1a53c27e89611}{set\+Accelerometer\+Sensitivity}} (uint8\+\_\+t full\+Scale\+Range)
+\begin{DoxyCompactList}\small\item\em sets the accelerometer sensitivity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a0adf45da7dbc197232c5440580a14102}{set\+Gyroscope\+Sensitivity}} (uint8\+\_\+t full\+Scale\+Range)
+\begin{DoxyCompactList}\small\item\em sets the Gyroscope sensitivity. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_aedfa4f1e6507f48c0a09545345a87875}{get\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Returns the temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a079ffc87d19c7dcdacfea13ba52cb4c1}{reset\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Resets the temperature. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a5a14115cf1875e810e02b0e1752d642d}{get\+AccellerationX}} ()
+\begin{DoxyCompactList}\small\item\em Returns the accelerometer\textquotesingle{}s X value. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a4792eb9f53f090aef4611d8fb6c665f2}{get\+AccellerationY}} ()
+\begin{DoxyCompactList}\small\item\em Returns the accelerometer\textquotesingle{}s Y value. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a7ce81ebfe52a8e1cd3c151c8114a29f7}{get\+AccellerationZ}} ()
+\begin{DoxyCompactList}\small\item\em Returns the accelerometer\textquotesingle{}s Z value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a0f87827c2fd79aff022baae32cf56cba}{reset\+Accelerometer}} ()
+\begin{DoxyCompactList}\small\item\em Resets the accelerometer. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a6da3ae068a2bc895eb24e19c073eef97}{get\+GyroX}} ()
+\begin{DoxyCompactList}\small\item\em Returns the gyroscope\textquotesingle{}s X value. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a596664a8580696b30b614285ed8cb7fe}{get\+GyroY}} ()
+\begin{DoxyCompactList}\small\item\em Returns the gyroscope\textquotesingle{}s Y value. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classMPU6050_a4caf0233714ab9815e860eba4c167aad}{get\+GyroZ}} ()
+\begin{DoxyCompactList}\small\item\em Returns the gyroscope\textquotesingle{}s Z value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a978f3153aaa9c2e9449105f9b7039203}{reset\+Gyroscope}} ()
+\begin{DoxyCompactList}\small\item\em Resets the gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_ad4931f0b76b78a101e74db3f517d32d9}{reset\+Chip}} ()
+\begin{DoxyCompactList}\small\item\em Resets chip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMPU6050_a669bc47c08b86906a7dda442af96f0d5}\label{classMPU6050_a669bc47c08b86906a7dda442af96f0d5}} 
+\index{MPU6050@{MPU6050}!MPU6050@{MPU6050}}
+\index{MPU6050@{MPU6050}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{MPU6050()}{MPU6050()}}
+{\footnotesize\ttfamily M\+P\+U6050\+::\+M\+P\+U6050 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initilizes values. 
+
+This is the class\textquotesingle{}s constructor which initilizes the chip\textquotesingle{}s address, the i2c bus and the sensitivity of the gyroscope and accelerometer, which are set to their default values. ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMPU6050_a5a14115cf1875e810e02b0e1752d642d}\label{classMPU6050_a5a14115cf1875e810e02b0e1752d642d}} 
+\index{MPU6050@{MPU6050}!getAccellerationX@{getAccellerationX}}
+\index{getAccellerationX@{getAccellerationX}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getAccellerationX()}{getAccellerationX()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+AccellerationX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the accelerometer\textquotesingle{}s X value. 
+
+This function returns the accelerometer\textquotesingle{}s X value in g $\ast$10$^\wedge$3. \mbox{\Hypertarget{classMPU6050_a4792eb9f53f090aef4611d8fb6c665f2}\label{classMPU6050_a4792eb9f53f090aef4611d8fb6c665f2}} 
+\index{MPU6050@{MPU6050}!getAccellerationY@{getAccellerationY}}
+\index{getAccellerationY@{getAccellerationY}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getAccellerationY()}{getAccellerationY()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+AccellerationY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the accelerometer\textquotesingle{}s Y value. 
+
+This function returns the accelerometer\textquotesingle{}s Y value in g $\ast$10$^\wedge$3. \mbox{\Hypertarget{classMPU6050_a7ce81ebfe52a8e1cd3c151c8114a29f7}\label{classMPU6050_a7ce81ebfe52a8e1cd3c151c8114a29f7}} 
+\index{MPU6050@{MPU6050}!getAccellerationZ@{getAccellerationZ}}
+\index{getAccellerationZ@{getAccellerationZ}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getAccellerationZ()}{getAccellerationZ()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+AccellerationZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the accelerometer\textquotesingle{}s Z value. 
+
+This function returns the accelerometer\textquotesingle{}s Z value in g $\ast$10$^\wedge$3. \mbox{\Hypertarget{classMPU6050_a6da3ae068a2bc895eb24e19c073eef97}\label{classMPU6050_a6da3ae068a2bc895eb24e19c073eef97}} 
+\index{MPU6050@{MPU6050}!getGyroX@{getGyroX}}
+\index{getGyroX@{getGyroX}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getGyroX()}{getGyroX()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+GyroX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the gyroscope\textquotesingle{}s X value. 
+
+This function returns the gyroscope\textquotesingle{}s X value in °/s. \mbox{\Hypertarget{classMPU6050_a596664a8580696b30b614285ed8cb7fe}\label{classMPU6050_a596664a8580696b30b614285ed8cb7fe}} 
+\index{MPU6050@{MPU6050}!getGyroY@{getGyroY}}
+\index{getGyroY@{getGyroY}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getGyroY()}{getGyroY()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+GyroY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the gyroscope\textquotesingle{}s Y value. 
+
+This function returns the gyroscope\textquotesingle{}s Y value in °/s. \mbox{\Hypertarget{classMPU6050_a4caf0233714ab9815e860eba4c167aad}\label{classMPU6050_a4caf0233714ab9815e860eba4c167aad}} 
+\index{MPU6050@{MPU6050}!getGyroZ@{getGyroZ}}
+\index{getGyroZ@{getGyroZ}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getGyroZ()}{getGyroZ()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+GyroZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the gyroscope\textquotesingle{}s Z value. 
+
+This function returns the gyroscope\textquotesingle{}s Z value in °/s. \mbox{\Hypertarget{classMPU6050_aedfa4f1e6507f48c0a09545345a87875}\label{classMPU6050_aedfa4f1e6507f48c0a09545345a87875}} 
+\index{MPU6050@{MPU6050}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the temperature. 
+
+This function returns the temperature in degrees °C. \mbox{\Hypertarget{classMPU6050_a51c82170d634348a8997720fcd2d581f}\label{classMPU6050_a51c82170d634348a8997720fcd2d581f}} 
+\index{MPU6050@{MPU6050}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily uint8\+\_\+t M\+P\+U6050\+::read\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{register\+Adress }\end{DoxyParamCaption})}
+
+
+
+Reads a register. 
+
+This function will read the value of the register that it is given. \mbox{\Hypertarget{classMPU6050_a0f87827c2fd79aff022baae32cf56cba}\label{classMPU6050_a0f87827c2fd79aff022baae32cf56cba}} 
+\index{MPU6050@{MPU6050}!resetAccelerometer@{resetAccelerometer}}
+\index{resetAccelerometer@{resetAccelerometer}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{resetAccelerometer()}{resetAccelerometer()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::reset\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the accelerometer. 
+
+This function resests the accelerometer. ~\newline
+ \mbox{\Hypertarget{classMPU6050_ad4931f0b76b78a101e74db3f517d32d9}\label{classMPU6050_ad4931f0b76b78a101e74db3f517d32d9}} 
+\index{MPU6050@{MPU6050}!resetChip@{resetChip}}
+\index{resetChip@{resetChip}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{resetChip()}{resetChip()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::reset\+Chip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets chip. 
+
+This function will reset the chip. \mbox{\Hypertarget{classMPU6050_a978f3153aaa9c2e9449105f9b7039203}\label{classMPU6050_a978f3153aaa9c2e9449105f9b7039203}} 
+\index{MPU6050@{MPU6050}!resetGyroscope@{resetGyroscope}}
+\index{resetGyroscope@{resetGyroscope}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{resetGyroscope()}{resetGyroscope()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::reset\+Gyroscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the gyroscope. 
+
+This function resests the gyroscope. ~\newline
+ \mbox{\Hypertarget{classMPU6050_a079ffc87d19c7dcdacfea13ba52cb4c1}\label{classMPU6050_a079ffc87d19c7dcdacfea13ba52cb4c1}} 
+\index{MPU6050@{MPU6050}!resetTemperature@{resetTemperature}}
+\index{resetTemperature@{resetTemperature}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{resetTemperature()}{resetTemperature()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::reset\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the temperature. 
+
+This function resests the temperature sensor. ~\newline
+ \mbox{\Hypertarget{classMPU6050_a5869de617eaef8041bc1a53c27e89611}\label{classMPU6050_a5869de617eaef8041bc1a53c27e89611}} 
+\index{MPU6050@{MPU6050}!setAccelerometerSensitivity@{setAccelerometerSensitivity}}
+\index{setAccelerometerSensitivity@{setAccelerometerSensitivity}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{setAccelerometerSensitivity()}{setAccelerometerSensitivity()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::set\+Accelerometer\+Sensitivity (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{full\+Scale\+Range }\end{DoxyParamCaption})}
+
+
+
+sets the accelerometer sensitivity. 
+
+This function sets the sensitivity of the accelerometer depending on what full scale range it is given. The scaling goes like this\+: 0 = ±2g, 1 = ±4g, 2 = ±8g, 3 = ±16g. ~\newline
+ \mbox{\Hypertarget{classMPU6050_a0adf45da7dbc197232c5440580a14102}\label{classMPU6050_a0adf45da7dbc197232c5440580a14102}} 
+\index{MPU6050@{MPU6050}!setGyroscopeSensitivity@{setGyroscopeSensitivity}}
+\index{setGyroscopeSensitivity@{setGyroscopeSensitivity}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{setGyroscopeSensitivity()}{setGyroscopeSensitivity()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::set\+Gyroscope\+Sensitivity (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{full\+Scale\+Range }\end{DoxyParamCaption})}
+
+
+
+sets the Gyroscope sensitivity. 
+
+This function sets the sensitivity of the Gyroscope depending on what full scale range it is given. The scaling goes like this\+: 0 = ±250°/s, 1 = ±500°/s, 2 = ±1000°/s, 3 = ±2000°/s. ~\newline
+ \mbox{\Hypertarget{classMPU6050_a14d45cb8c0d8744bd280ca7d05e5d962}\label{classMPU6050_a14d45cb8c0d8744bd280ca7d05e5d962}} 
+\index{MPU6050@{MPU6050}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wakes up the chip. 
+
+This function wakes up the chip so all other functions can be used. \mbox{\Hypertarget{classMPU6050_a1b3f024861c18e17790ebb560d5bdd32}\label{classMPU6050_a1b3f024861c18e17790ebb560d5bdd32}} 
+\index{MPU6050@{MPU6050}!whoAmI@{whoAmI}}
+\index{whoAmI@{whoAmI}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{whoAmI()}{whoAmI()}}
+{\footnotesize\ttfamily int M\+P\+U6050\+::who\+AmI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the chip\textquotesingle{}s address. 
+
+This function returns the adress of the chip. This is either 0x68 when A\+D0 is set to low or 0x69 when A\+D0 is set to high. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MPU6050_8hpp}{M\+P\+U6050.\+hpp}}\item 
+M\+P\+U6050.\+cpp\end{DoxyCompactItemize}

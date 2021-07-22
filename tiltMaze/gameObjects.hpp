@@ -8,7 +8,6 @@
 /// Class for the game objects.
 /// \details
 /// This class creates game objects and provides functions for them.
-/// It only accepts hwlib lines and rectangles.
 
 class gameObjects{
 public:
@@ -16,12 +15,27 @@ public:
    int startY;
    int endX;
    int endY;
+   int ballX;
+   int ballY;
+   int radius;
 
    /// \brief
    /// Initilizes values.
    /// \details
-   /// This is the class's constructor which initilizes the startX, startY, endX and endY of an game object.
+   /// This is the class's constructor which initilizes the startX, startY, endX and endY of a wall or finish game object.
 	gameObjects(int startX, int startY, int endX, int endY);
+
+   /// \brief
+   /// Initilizes values.
+   /// \details
+   /// This is the class's constructor which initilizes the ballX, ballY and radius of a ball game object.
+   gameObjects(int ballX, int ballY, int radius);
+
+   /// \brief
+   /// Draws ball.
+   /// \details
+   /// This function creates and draws a game object as a ball.
+   void drawBall(hwlib::glcd_oled & display);
 
    /// \brief
    /// Draws wall.
@@ -38,7 +52,7 @@ public:
    /// \brief
    /// Checks collision.
    /// \details
-   /// This function checks if two objects are colliding with each other.
+   /// This function checks if the ball is colliding with a wall or finish.
 	bool checkCollision(int ballX, int ballY);
 };
 

@@ -1,0 +1,127 @@
+\hypertarget{classgameObjects}{}\doxysection{game\+Objects Class Reference}
+\label{classgameObjects}\index{gameObjects@{gameObjects}}
+
+
+Class for the game objects.  
+
+
+
+
+{\ttfamily \#include $<$game\+Objects.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgameObjects_a0bd0f7d19b13a7d0d1df5efe44eb6535}{game\+Objects}} (int startX, int startY, int endX, int endY)
+\begin{DoxyCompactList}\small\item\em Initilizes values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgameObjects_a92bb2121c960f118838c32990974b093}{game\+Objects}} (int ballX, int ballY, int radius)
+\begin{DoxyCompactList}\small\item\em Initilizes values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgameObjects_afc21b1f62cd5847324c6440f5c7dfcba}{draw\+Ball}} (hwlib\+::glcd\+\_\+oled \&display)
+\begin{DoxyCompactList}\small\item\em Draws ball. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgameObjects_a67be215e24ba31b774871fa823096b7c}{draw\+Wall}} (hwlib\+::glcd\+\_\+oled \&display)
+\begin{DoxyCompactList}\small\item\em Draws wall. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgameObjects_a7a3e3d70518eeccb74f62420352c264f}{draw\+Finish}} (hwlib\+::glcd\+\_\+oled \&display)
+\begin{DoxyCompactList}\small\item\em Draws finish. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgameObjects_acfd1e5aafb28149ea34df34d1ea0f5c9}{check\+Collision}} (int ballX, int ballY)
+\begin{DoxyCompactList}\small\item\em Checks collision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgameObjects_a06b63124b356bc77ed2731a237e34979}\label{classgameObjects_a06b63124b356bc77ed2731a237e34979}} 
+int {\bfseries startX}
+\item 
+\mbox{\Hypertarget{classgameObjects_ac6f71dab77ac00f66be5365c3371e243}\label{classgameObjects_ac6f71dab77ac00f66be5365c3371e243}} 
+int {\bfseries startY}
+\item 
+\mbox{\Hypertarget{classgameObjects_a7e64665cc5e78a244b4f0697984c2304}\label{classgameObjects_a7e64665cc5e78a244b4f0697984c2304}} 
+int {\bfseries endX}
+\item 
+\mbox{\Hypertarget{classgameObjects_a500c1c7ae03d7f76ec7367b39b5cfb7f}\label{classgameObjects_a500c1c7ae03d7f76ec7367b39b5cfb7f}} 
+int {\bfseries endY}
+\item 
+\mbox{\Hypertarget{classgameObjects_ae439987a208f6779336f4945d1eab4b1}\label{classgameObjects_ae439987a208f6779336f4945d1eab4b1}} 
+int {\bfseries ballX}
+\item 
+\mbox{\Hypertarget{classgameObjects_a77a8cb61420e15901d5837c2b1906113}\label{classgameObjects_a77a8cb61420e15901d5837c2b1906113}} 
+int {\bfseries ballY}
+\item 
+\mbox{\Hypertarget{classgameObjects_a046648e398a8fb89eb230b6263bda456}\label{classgameObjects_a046648e398a8fb89eb230b6263bda456}} 
+int {\bfseries radius}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the game objects. 
+
+This class creates game objects and provides functions for them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgameObjects_a0bd0f7d19b13a7d0d1df5efe44eb6535}\label{classgameObjects_a0bd0f7d19b13a7d0d1df5efe44eb6535}} 
+\index{gameObjects@{gameObjects}!gameObjects@{gameObjects}}
+\index{gameObjects@{gameObjects}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{gameObjects()}{gameObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily game\+Objects\+::game\+Objects (\begin{DoxyParamCaption}\item[{int}]{startX,  }\item[{int}]{startY,  }\item[{int}]{endX,  }\item[{int}]{endY }\end{DoxyParamCaption})}
+
+
+
+Initilizes values. 
+
+This is the class\textquotesingle{}s constructor which initilizes the startX, startY, endX and endY of a wall or finish game object. \mbox{\Hypertarget{classgameObjects_a92bb2121c960f118838c32990974b093}\label{classgameObjects_a92bb2121c960f118838c32990974b093}} 
+\index{gameObjects@{gameObjects}!gameObjects@{gameObjects}}
+\index{gameObjects@{gameObjects}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{gameObjects()}{gameObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily game\+Objects\+::game\+Objects (\begin{DoxyParamCaption}\item[{int}]{ballX,  }\item[{int}]{ballY,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+Initilizes values. 
+
+This is the class\textquotesingle{}s constructor which initilizes the ballX, ballY and radius of a ball game object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgameObjects_acfd1e5aafb28149ea34df34d1ea0f5c9}\label{classgameObjects_acfd1e5aafb28149ea34df34d1ea0f5c9}} 
+\index{gameObjects@{gameObjects}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily bool game\+Objects\+::check\+Collision (\begin{DoxyParamCaption}\item[{int}]{ballX,  }\item[{int}]{ballY }\end{DoxyParamCaption})}
+
+
+
+Checks collision. 
+
+This function checks if the ball is colliding with a wall or finish. \mbox{\Hypertarget{classgameObjects_afc21b1f62cd5847324c6440f5c7dfcba}\label{classgameObjects_afc21b1f62cd5847324c6440f5c7dfcba}} 
+\index{gameObjects@{gameObjects}!drawBall@{drawBall}}
+\index{drawBall@{drawBall}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{drawBall()}{drawBall()}}
+{\footnotesize\ttfamily void game\+Objects\+::draw\+Ball (\begin{DoxyParamCaption}\item[{hwlib\+::glcd\+\_\+oled \&}]{display }\end{DoxyParamCaption})}
+
+
+
+Draws ball. 
+
+This function creates and draws a game object as a ball. \mbox{\Hypertarget{classgameObjects_a7a3e3d70518eeccb74f62420352c264f}\label{classgameObjects_a7a3e3d70518eeccb74f62420352c264f}} 
+\index{gameObjects@{gameObjects}!drawFinish@{drawFinish}}
+\index{drawFinish@{drawFinish}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{drawFinish()}{drawFinish()}}
+{\footnotesize\ttfamily void game\+Objects\+::draw\+Finish (\begin{DoxyParamCaption}\item[{hwlib\+::glcd\+\_\+oled \&}]{display }\end{DoxyParamCaption})}
+
+
+
+Draws finish. 
+
+This function creates and draws a game object as a finsih. \mbox{\Hypertarget{classgameObjects_a67be215e24ba31b774871fa823096b7c}\label{classgameObjects_a67be215e24ba31b774871fa823096b7c}} 
+\index{gameObjects@{gameObjects}!drawWall@{drawWall}}
+\index{drawWall@{drawWall}!gameObjects@{gameObjects}}
+\doxysubsubsection{\texorpdfstring{drawWall()}{drawWall()}}
+{\footnotesize\ttfamily void game\+Objects\+::draw\+Wall (\begin{DoxyParamCaption}\item[{hwlib\+::glcd\+\_\+oled \&}]{display }\end{DoxyParamCaption})}
+
+
+
+Draws wall. 
+
+This function creates and draws a game object as a wall. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gameObjects_8hpp}{game\+Objects.\+hpp}}\item 
+game\+Objects.\+cpp\end{DoxyCompactItemize}

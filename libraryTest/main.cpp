@@ -64,14 +64,14 @@ void testGetAccellerationY(MPU6050 sensor){
     else hwlib::cout << "getAccellerationY isn't working correctly!" << hwlib::endl << hwlib::endl;
 }
 
-//For this test it is required that the sensor is put on a flat surface and that it isn't moving.
+//For this test it is required that the sensor is put on a flat surface that it isn't moving.
 //This will check if the getAccellerationZ returns a realistic value.
 //There is a chance that this won't work because of your location. 
 //If that happens use the while loop in the main to check the values yourself.
 void testGetAccellerationZ(MPU6050 sensor){
     sensor.resetAccelerometer();
     sensor.setAccelerometerSensitivity(0);
-    if(sensor.getAccellerationZ() < 120 && sensor.getAccellerationZ() > -30) hwlib::cout << "getAccellerationZ works!" << hwlib::endl << hwlib::endl;
+    if(sensor.getAccellerationZ() < 6000 && sensor.getAccellerationZ() > -30) hwlib::cout << "getAccellerationZ works!" << hwlib::endl << hwlib::endl;
     else hwlib::cout << "getAccellerationZ isn't working correctly!" << hwlib::endl << hwlib::endl;
 }
 

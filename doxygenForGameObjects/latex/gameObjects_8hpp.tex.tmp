@@ -1,0 +1,10 @@
+\hypertarget{gameObjects_8hpp}{}\doxysection{game\+Objects.\+hpp File Reference}
+\label{gameObjects_8hpp}\index{gameObjects.hpp@{gameObjects.hpp}}
+{\ttfamily \#include \char`\"{}hwlib.\+hpp\char`\"{}}\newline
+Include dependency graph for game\+Objects.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgameObjects}{game\+Objects}}
+\begin{DoxyCompactList}\small\item\em Class for the game objects. \end{DoxyCompactList}\end{DoxyCompactItemize}

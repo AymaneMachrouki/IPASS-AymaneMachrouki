@@ -45,8 +45,9 @@ int main(){
         gameObjects(100, 50, 115, 50)
     };
 
-    int ballX = 5; 
-    int ballY = 58;
+    gameObjects ball(5, 58, 3);
+    gameObjects finish(77, 19, 82, 24);
+
     int calibrationX = 0;
     int calibrationY = 0;
     bool win = false;
@@ -55,10 +56,10 @@ int main(){
         while(!win){ 
             display.clear();
 
-            if(sensor.getAccellerationX() - calibrationX > 200) ballY--;
-            else if(sensor.getAccellerationX() - calibrationX < -200) ballY++;
-            if(sensor.getAccellerationY() - calibrationY > 200) ballX--;
-            else if(sensor.getAccellerationY() - calibrationY < -200) ballX++;
+            if(sensor.getAccellerationX() - calibrationX > 200) ball.ballY--;
+            else if(sensor.getAccellerationX() - calibrationX < -200) ball.ballY++;
+            if(sensor.getAccellerationY() - calibrationY > 200) ball.ballX--;
+            else if(sensor.getAccellerationY() - calibrationY < -200) ball.ballX++;
 
             if(!calibrationButton.read()){
                 calibrationX = sensor.getAccellerationX();
@@ -66,40 +67,35 @@ int main(){
             }
 
             if(!resetButton.read()){
-                ballX = 5; 
-                ballY = 58;
+                ball.ballX = 5; 
+                ball.ballY = 58;
             }
 
-            hwlib::circle ball(hwlib::xy(ballX, ballY), 3);
-            ball.draw(display);
+            if(finish.checkCollision(ball.ballX, ball.ballY)) win = true;    
 
-            gameObjects finish(77, 19, 82, 24);
+            ball.drawBall(display);
             finish.drawFinish(display);
 
             for(gameObjects& walls : gameMap){
                 walls.drawWall(display);
-                if(walls.checkCollision(ballX, ballY)){
-                    if(ballX+4 <= walls.startX) ballX -=1;
-                    else if(ballX-4 >= walls.endX) ballX +=1;
-                    else if(ballY+4 <= walls.startY) ballY -=1;
-                    else if(ballY-4 >= walls.endY) ballY +=1;
+                if(walls.checkCollision(ball.ballX, ball.ballY)){
+                    if(ball.ballX+4 <= walls.startX) ball.ballX -=1;
+                    else if(ball.ballX-4 >= walls.endX) ball.ballX +=1;
+                    else if(ball.ballY+4 <= walls.startY) ball.ballY -=1;
+                    else if(ball.ballY-4 >= walls.endY) ball.ballY +=1;
                 }
             }
-
-            if(finish.checkCollision(ballX, ballY)) win = true;    
 
             display.flush();
         }
         winScreen << "\f\n\n     YOU WIN\n\n    PRESS THE\n WHITE BUTTON TO\n   PLAY AGAIN!"; 
 
         if(!resetButton.read()){
-            ballX = 5; 
-            ballY = 58;
+            ball.ballX = 5; 
+            ball.ballY = 58;
             win = false;
         }
 
         display.flush();
     }
-
-    sensor.resetChip();
 }
